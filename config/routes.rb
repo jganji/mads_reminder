@@ -6,6 +6,11 @@ Rubyprojects::Application.routes.draw do
   get "appointmentreminder/reminder"
   get "appointmentreminder/goodbye"
   
+  get "admin/index"
+  resources :appointments
+  resources :business_users
+  root :to => 'admin#index', :as => 'admin'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

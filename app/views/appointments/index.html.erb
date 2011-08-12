@@ -1,0 +1,31 @@
+<h1>Listing appointments</h1>
+
+<table>
+  <tr>
+    <th>Business guid</th>
+    <th>Customer name</th>
+    <th>Customer phone</th>
+    <th>Appointment date</th>
+    <th>Appointment time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @appointments.each do |appointment| %>
+  <tr>
+    <td><%= appointment.business_guid %></td>
+    <td><%= appointment.customer_name %></td>
+    <td><%= appointment.customer_phone %></td>
+    <td><%= appointment.appointment_date %></td>
+    <td><%= appointment.appointment_time %></td>
+    <td><%= link_to 'Show', appointment %></td>
+    <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+    <td><%= link_to 'Destroy', appointment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Appointment', new_appointment_path %>

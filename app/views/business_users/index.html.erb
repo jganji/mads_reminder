@@ -1,0 +1,31 @@
+<div id="business_users_list" >
+<h1>Listing business_users</h1>
+
+<table>
+  <tr>
+    <th>Business guid</th>
+    <th>Business name</th>
+    <th>Business contact</th>
+    <th>Business email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @business_users.each do |business_user| %>
+<tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
+    <td><%= business_user.business_guid %></td>
+    <td><%= business_user.business_name %></td>
+    <td><%= business_user.business_contact %></td>
+    <td><%= business_user.business_email_id %></td>
+    <td class="list_actions" >
+    <%= link_to 'Show', business_user %></br>
+    <%= link_to 'Edit', edit_business_user_path(business_user) %></br>
+    <%= link_to 'Destroy', business_user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<br />
+
+<%= link_to 'New Business user', new_business_user_path %>
