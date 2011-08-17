@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  BusinessPartnerGuid: MyString
+  BusinessName: MyString
+  BusinessContact: MyString
+  BusinessEmailId: MyString
+
+two:
+  BusinessPartnerGuid: MyString
+  BusinessName: MyString
+  BusinessContact: MyString
+  BusinessEmailId: MyString

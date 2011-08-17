@@ -1,0 +1,33 @@
+<%= form_for(@business_partner) do |f| %>
+  <% if @business_partner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@business_partner.errors.count, "error") %> prohibited this business_partner from being saved:</h2>
+
+      <ul>
+      <% @business_partner.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :BusinessPartnerGuid %><br />
+    <%= f.text_field :BusinessPartnerGuid %>
+  </div>
+  <div class="field">
+    <%= f.label :BusinessName %><br />
+    <%= f.text_field :BusinessName %>
+  </div>
+  <div class="field">
+    <%= f.label :BusinessContact %><br />
+    <%= f.text_field :BusinessContact %>
+  </div>
+  <div class="field">
+    <%= f.label :BusinessEmailId %><br />
+    <%= f.text_field :BusinessEmailId %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

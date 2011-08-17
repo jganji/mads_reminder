@@ -1,4 +1,7 @@
 Rubyprojects::Application.routes.draw do
+  resources :business_partners
+  resources :appointments
+  resources :business_users
   get "appointmentreminder/index"
   get "appointmentreminder/makecall"
   match ':controller(/:action(.:format))'
@@ -7,8 +10,7 @@ Rubyprojects::Application.routes.draw do
   get "appointmentreminder/goodbye"
   
   get "admin/index"
-  resources :appointments
-  resources :business_users
+ 
   root :to => 'admin#index', :as => 'admin'
   
   # The priority is based upon order of creation:
