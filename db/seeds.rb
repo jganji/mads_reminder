@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+appointments = Appointment.create([
+  {:business_guid => 'guid1', :customer_name => 'Karunakar', 
+  :customer_phone => '5104932282', :appointment_date => '08/31/2011' , :appointment_time => '13:10'},
+  {:business_guid => 'guid2', :customer_name => 'Mahesh', 
+  :customer_phone => '5104932282', :appointment_date => '08/30/2011' , :appointment_time => '14:10'},
+  {:business_guid => 'guid3', :customer_name => 'Jithu', 
+  :customer_phone => '5104932282', :appointment_date => '08/29/2011' , :appointment_time => '15:10'},
+  {:business_guid => 'guid4', :customer_name => 'Madhu', 
+  :customer_phone => '5104932282', :appointment_date => '08/28/2011' , :appointment_time => '16:10'},
+  ])
