@@ -1,4 +1,9 @@
 Rubyprojects::Application.routes.draw do
+  get "file/import"
+  post "file/import" => 'file#upload'
+  resources :import_tables
+
+
   resources :business_partners
   resources :appointments
   resources :business_users
